@@ -7,6 +7,7 @@ import AppFooter from './components/layout/AppFooter';
 import { AppTopbar } from './components/layout/AppTopbar';
 import { AppProfile } from './components/layout/AppProfile';
 import { AppMenu } from './components/layout/AppMenu';
+import {RouterOutlet} from './components/RouterOutlet';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
@@ -17,7 +18,7 @@ import './App.scss';
 function App() {
   const [appState, setAppState] = useState(AppState);
   const menuItems = useMenuItem(appState, setAppState);
-
+  
   const isDesktop = () => window.innerWidth > 1024;
   const onToggleMenu = (e) => isDesktop() && appState.layoutMode === 'overlay'
     ? setAppState({ ...appState, overlayMenuActive: !appState.overlayMenuActive })
@@ -60,7 +61,7 @@ function App() {
       </div>
 
       <div className="layout-main" onClick={() => appState.layoutMode == 'overlay' ? setAppState({...appState, overlayMenuActive: false}) : null}>
-
+          <RouterOutlet />
       </div>
 
       <AppFooter />
