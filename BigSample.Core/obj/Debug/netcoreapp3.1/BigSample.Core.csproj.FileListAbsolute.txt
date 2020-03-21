@@ -1,0 +1,8 @@
+C:\Users\mlunn\source\repos\BigSample\BigSample.Core\bin\Debug\netcoreapp3.1\BigSample.Core.deps.json
+C:\Users\mlunn\source\repos\BigSample\BigSample.Core\bin\Debug\netcoreapp3.1\BigSample.Core.dll
+C:\Users\mlunn\source\repos\BigSample\BigSample.Core\bin\Debug\netcoreapp3.1\BigSample.Core.pdb
+C:\Users\mlunn\source\repos\BigSample\BigSample.Core\obj\Debug\netcoreapp3.1\BigSample.Core.csprojAssemblyReference.cache
+C:\Users\mlunn\source\repos\BigSample\BigSample.Core\obj\Debug\netcoreapp3.1\BigSample.Core.AssemblyInfoInputs.cache
+C:\Users\mlunn\source\repos\BigSample\BigSample.Core\obj\Debug\netcoreapp3.1\BigSample.Core.AssemblyInfo.cs
+C:\Users\mlunn\source\repos\BigSample\BigSample.Core\obj\Debug\netcoreapp3.1\BigSample.Core.dll
+C:\Users\mlunn\source\repos\BigSample\BigSample.Core\obj\Debug\netcoreapp3.1\BigSample.Core.pdb
