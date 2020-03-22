@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {InputText} from 'primereact/inputtext';
 
 export const AppTopbar = ({onToggleMenu}) => {
+    
     return (
         <div className="layout-topbar clearfix">
             <button className="p-link layout-menu-button" onClick={onToggleMenu}>

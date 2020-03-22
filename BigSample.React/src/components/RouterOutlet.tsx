@@ -3,6 +3,7 @@ import { Route, Router, Switch } from 'react-router';
 import Loading from './Loading';
 
 export const RouterOutlet = () => {
+    
     const Home = React.lazy(() => import('./Home'));
     const About = React.lazy(() => import('./About'));
     const Contact = React.lazy(() => import('./Contact'));

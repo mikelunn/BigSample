@@ -6,21 +6,21 @@ import {AppTopbar} from './AppTopbar'
 import {AppMenu} from './AppMenu'
 import {AppProfile} from './AppProfile'
 
-export const Layout = ({children, onToggleMenu, menuItems, appState, setAppState}) => {
+export const Layout = ({children, onToggleMenu, menuItems, layoutState, setLayout}) => {
 
-    const logo = appState.layoutColorMode === 'dark' ? 'assets/layout/images/logo-white.svg' : 'assets/layout/images/logo.svg';
+    const logo = layoutState.layoutColorMode === 'dark' ? 'assets/layout/images/logo-white.svg' : 'assets/layout/images/logo.svg';
   
     const wrapperClass = classNames('layout-wrapper', {
-      'layout-overlay': appState.layoutMode === 'overlay',
-      'layout-static': appState.layoutMode === 'static',
-      'layout-static-sidebar-inactive': appState.staticMenuInactive && appState.layoutMode === 'static',
-      'layout-overlay-sidebar-active': appState.overlayMenuActive && appState.layoutMode === 'overlay',
-      'layout-mobile-sidebar-active': appState.mobileMenuActive
+      'layout-overlay': layoutState.layoutMode === 'overlay',
+      'layout-static': layoutState.layoutMode === 'static',
+      'layout-static-sidebar-inactive': layoutState.staticMenuInactive && layoutState.layoutMode === 'static',
+      'layout-overlay-sidebar-active': layoutState.overlayMenuActive && layoutState.layoutMode === 'overlay',
+      'layout-mobile-sidebar-active': layoutState.mobileMenuActive
     });
   
     const sidebarClassName = classNames("layout-sidebar", {
-      'layout-sidebar-dark': appState.layoutColorMode === 'dark',
-      'layout-sidebar-light': appState.layoutColorMode === 'light'
+      'layout-sidebar-dark': layoutState.layoutColorMode === 'dark',
+      'layout-sidebar-light': layoutState.layoutColorMode === 'light'
     });
     return (
         <div className={wrapperClass} >
@@ -33,11 +33,11 @@ export const Layout = ({children, onToggleMenu, menuItems, appState, setAppState
           <AppProfile />
           <AppMenu items={menuItems} onMenuItemClick={(e) =>
             !e.item.items && !e.item.command
-              ? setAppState({ ...appState, overlayMenuActive: false, mobileMenuActive: false })
+              ? setLayout({ ...layoutState, overlayMenuActive: false, mobileMenuActive: false })
               : null} />
         </div>
   
-        <div className="layout-main" onClick={() => appState.layoutMode == 'overlay' ? setAppState({...appState, overlayMenuActive: false}) : null}>
+        <div className="layout-main" onClick={() => layoutState.layoutMode == 'overlay' ? setLayout({...layoutState, overlayMenuActive: false}) : null}>
         {children}
         </div>
   
