@@ -27,9 +27,11 @@ function App() {
 
 
   return (
+    <BrowserRouter>
     <Layout onToggleMenu={onToggleMenu} menuItems={menuItems} layoutState={layoutState} setLayout={setLayout}>
       <RouterOutlet />
     </Layout>
+    </BrowserRouter>
     
   );
 }
