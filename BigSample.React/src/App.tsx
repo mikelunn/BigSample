@@ -10,6 +10,8 @@ import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import './styles/layout.scss';
 import './App.scss';
+import 'bulma';
+
 import { BrowserRouter } from 'react-router-dom';
 
 function App() {
@@ -28,7 +30,7 @@ function App() {
 
   return (
     <BrowserRouter>
-    <Layout onToggleMenu={onToggleMenu} menuItems={menuItems} layoutState={layoutState} setLayout={setLayout}>
+    <Layout mobile={isDesktop} onToggleMenu={onToggleMenu} menuItems={menuItems} layoutState={layoutState} setLayout={setLayout}>
       <RouterOutlet />
     </Layout>
     </BrowserRouter>

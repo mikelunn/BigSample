@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {InputText} from 'primereact/inputtext';
+import {Menubar} from 'primereact/menubar';
 
 export const AppTopbar = ({onToggleMenu}) => {
     
@@ -8,7 +9,9 @@ export const AppTopbar = ({onToggleMenu}) => {
             <button className="p-link layout-menu-button" onClick={onToggleMenu}>
                 <span className="pi pi-bars"/>
             </button>
+      
             <div className="layout-topbar-icons">
+            
                 <span className="layout-topbar-search">
                     <InputText type="text" placeholder="Search" />
                     <span className="layout-topbar-search-icon pi pi-search"/>
